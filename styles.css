@@ -1,18 +1,83 @@
+/* Estilos Generales */
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
 }
 
+/* Encabezado */
 header {
+    background-color: #333;
+    color: #fff;
+    padding: 1rem 0;
+    text-align: center;
+}
+
+/* Contenedor Principal */
+main {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* Cuatro columnas de igual tamaño */
+    gap: 20px; /* Espacio entre los elementos de la cuadrícula */
+    padding: 20px;
+}
+
+/* Secciones */
+section {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 15px; /* Esquinas redondeadas */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centrar contenido horizontalmente */
+    justify-content: center; /* Centrar contenido verticalmente */
+}
+
+/* Títulos de Secciones con Imágenes */
+section h2 {
+    display: flex;
+    align-items: center; /* Alineación vertical de texto e imagen */
+    gap: 10px; /* Espacio entre texto e imagen */
+}
+
+section h2 img {
+    width: 24px; /* Tamaño de la imagen */
+    height: auto;
+}
+
+/* Botón de Exportar */
+#export-btn {
     background-color: #4CAF50;
     color: white;
-    text-align: center;
-    padding: 10px 0;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 1rem;
+    border-radius: 4px; /* Esquinas redondeadas para el botón */
+    transition: background-color 0.3s ease;
 }
 
-main {
-    margin: 20px;
+#export-btn:hover {
+    background-color: #367c39;
 }
 
-section {
-    margin-bottom: 20px;
+@media (max-width: 1024px) {
+    main {
+        grid-template-columns: repeat(2, 1fr); 
+    }
+}
+
+@media (max-width: 768px) {
+    main {
+        grid-template-columns: 1fr; 
+        padding: 10px;
+    }
+
+    header h1,
+    section h2 {
+        font-size: 1.5rem;
+    }
 }
