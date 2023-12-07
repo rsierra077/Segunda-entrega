@@ -1,13 +1,16 @@
 .gradient-custom-2 {
-    /* fallback for old browsers */
-    background: #fccb90;
-    
-    /* Chrome 10-25, Safari 5.1-6 */
-    background: -webkit-linear-gradient(to right, #ee7724, #d8363a, #dd3675, #b44593);
-    
+    /* Fallback para navegadores antiguos */
+    background: #5BE8E8;
+
+    /* Para Chrome 10-25 y Safari 5.1-6 */
+    background: -webkit-linear-gradient(to right, #7bbdbd, #61a4be, #5688e4, #136983);
+
     /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-    background: linear-gradient(to right, #ee7724, #d8363a, #dd3675, #b44593);
-    }
+    background: linear-gradient(to right, #79bbbb, #5db0d1, #6495ED, #165bc2);
+}
+
+
+
     
     @media (min-width: 768px) {
     .gradient-form {

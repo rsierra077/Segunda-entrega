@@ -15,7 +15,7 @@
 
 <body>
  
-  <section class="h-100 gradient-form" style="background-color: #eee;">
+<section class="h-100 gradient-form" style="background: linear-gradient(to right, #5BE8E8, #5db0d1, #6495ED);">
   <div class="container py-5 h-100">
     <div class="row d-flex justify-content-center align-items-center h-100">
       <div class="col-xl-10">
@@ -27,32 +27,34 @@
                 <div class="text-center">
                   <img src="{{ asset('assets\logo.jpg') }}"
                     style="width: 130px;" alt="logo">
-                  <h4 class="mt-1 mb-5 pb-1">Monitoreo de Temperatura y Humedad</h4>
+                  <h4 class="mt-1 mb-5 pb-1">BIENVENIDOS</h4>
                 </div>
 
-                <form>
-                  <p>Iniciar sesión</p>
+                <form action="{{route('login')}}" method="post">
+                  @csrf
+                  <p>INICIAR SESIÓN</p>
 
                   <div class="form-outline mb-4">
-                    <input type="email" id="form2Example11" class="form-control"
-                      placeholder="Ingrese correo electrónico" />
-                    <label class="form-label" for="form2Example11">User</label>
+                     <label class="form-label" for="form2Example11">Correo</label>
+                    <input type="email" name="email" id="form2Example11" class="form-control"
+                     placeholder="Ingrese correo electrónico" />
                   </div>
 
                   <div class="form-outline mb-4">
-                    <input type="password" id="form2Example22" class="form-control" 
-                    placeholder="Ingrese contraseña" />
-                    <label class="form-label" for="form2Example22">Password</label>
+                     <label class="form-label" for="form2Example22">Contraseña</label>
+                    <input type="password" name="password" id="form2Example22" class="form-control" 
+                     placeholder="Ingrese contraseña" />
                   </div>
+
 
                   <div class="text-center pt-1 mb-5 pb-1">
-                    <button class="btn btn-primary btn-block fa-lg gradient-custom-2 mb-3" type="button">Ingresar</button>
+                    <button class="btn btn-primary btn-block fa-lg gradient-custom-2 mb-3" type="submit">Ingresar</button>
                     <a class="text-muted" href="#!">Olvidó su contraseña?</a>
                   </div>
 
                   <div class="d-flex align-items-center justify-content-center pb-4">
                     <p class="mb-0 me-2">No tiene una cuenta?</p>
-                    <a href="{{route('register')}}" class="btn btn-outline-danger">Crear nueva cuenta</a>
+                    <a href="{{route('register')}}" class="btn btn-outline-danger">Crear cuenta</a>
                   </div>
 
                 </form>
@@ -60,9 +62,9 @@
               </div>
             </div>
             <div class="col-lg-6 d-flex align-items-center gradient-custom-2">
-              <div class="text-white px-3 py-4 p-md-5 mx-md-4">
-                <h4 class="mb-4">BIENVENIDO!</h4>
-                <p class="small mb-0">Nuestro sitio web de Monitoreo de Humedad y temperatura, no se que floro poner pipipi.</p>
+              <div class="text-black px-3 py-4 p-md-5 mx-md-4">
+                <h4 class="mb-4">MONITOREO DE TEMPERATURA Y HUMEDAD</h4>
+                <p class="small mb-0">Inicia sesión para acceder a información y datos recopilados de temperatura y humedad en la ciudad de Arequipa</p>
               </div>
             </div>
           </div>
