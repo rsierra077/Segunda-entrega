@@ -1,0 +1,169 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed; /* Esto mantiene la imagen de fondo fija al hacer scroll */
+    background-color: #d1ebf2; /* Fallback de color de fondo si la imagen no se carga */
+}
+
+#menu {
+    display: flex;
+    justify-content: space-around;
+    background-color: rgba(51, 51, 51, 0.8); /* Color de fondo con transparencia */
+    padding: 10px;
+    color: white;
+    opacity: 0.9;
+}
+
+#menu button {
+    background-color: rgba(85, 85, 85, 0.8); /* Color de fondo del botón con transparencia */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease; /* Agregado para una transición suave */
+}
+
+#menu button:hover {
+    background-color: rgba(119, 119, 119, 0.9); /* Color de fondo del botón con transparencia en el hover */
+}
+
+#map-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 300px;
+    margin: 50px;
+    
+}
+
+iframe {
+    border: none;
+    width: 100%;
+    height: 100%;
+}
+
+#content-box {
+    
+    padding: 20px;
+    margin: 20px 0;
+    text-align: center;
+    opacity: 0.9;
+}
+
+h1, h2 {
+    color: #333;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+li {
+    position: relative;
+    margin: 0 10px 15px 10px;
+    background-color: rgba(240, 240, 240, 0.9); /* Transparencia del elemento de lista */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease;
+    cursor: pointer;
+    width: 30%;
+    opacity: 10;
+}
+
+li:hover {
+    background-color: rgba(224, 224, 224, 0.9); /* Transparencia del elemento de lista en el hover */
+}
+
+.tooltip {
+    visibility: hidden;
+    width: 150px;
+    background-color: rgba(51, 51, 51, 0.9); /* Transparencia del tooltip */
+    color: #fff;
+    text-align: center;
+    border-radius: 5px;
+    padding: 5px;
+    position: absolute;
+    z-index: 1;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 0;
+    
+}
+
+li:hover .tooltip {
+    visibility: visible;
+   
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(255, 255, 255, 0.9); /* Transparencia del modal */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    max-width: 800px;
+    max-height: 800px;
+    width: 100%;
+    text-align: center;
+}
+
+.modal h3 {
+    color: #333;
+}
+
+.modal p {
+    color: #555;
+}
+
+.modal-close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+    font-size: 18px;
+    color: #333;
+}
+
+.custom-marker {
+    position: absolute;
+    background-color: red;
+    color: white;
+    border: 1px solid #fff;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    font-weight: bold;
+    cursor: pointer;
+    opacity: 10; /* Transparencia del marcador personalizado */
+}
+
+#hora-fecha {
+    background-color: rgba(51, 51, 51, 0.8); /* Transparencia del contenedor de hora y fecha */
+    color: white;
+    padding: 20px;
+    text-align: center;
+    font-size: 36px;
+    margin: 10px;
+    opacity: 10; /* Transparencia del contenedor de hora y fecha */
+}
